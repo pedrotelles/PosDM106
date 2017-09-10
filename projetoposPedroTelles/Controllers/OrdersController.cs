@@ -69,7 +69,8 @@ namespace projetoposPedroTelles.Controllers
             {
                 return BadRequest("Falha	ao	consultar	o	CRM");
             }
-        }
+        }
+
 
         //GET: api/Orders/byemail=...
         [Authorize(Roles ="ADMIN, USER")]
