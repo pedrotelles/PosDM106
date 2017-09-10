@@ -111,7 +111,7 @@ namespace projetoposPedroTelles.Controllers
                     var order = db.Orders.Find(id);
                     if (User.IsInRole("ADMIN"))
                     {
-                        if(order.precoTotal == 0)
+                        if(order.precoFrete == 0)
                         {
                             order.status = "fechado";
                             db.SaveChanges();
