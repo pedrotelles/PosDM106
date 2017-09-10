@@ -110,15 +110,23 @@ namespace projetoposPedroTelles.Controllers
                     var order = db.Orders.Find(id);
                     if (User.IsInRole("ADMIN"))
                     {
-                        order.status = "fechado";
-                        db.SaveChanges();
+                        if(order.precoTotal == 0)
+                        {
+                            order.status = "fechado";
+                            db.SaveChanges();
+                        }
+                       
                     }
                     else if (User.IsInRole("USER"))
                     {
                         if (User.Identity.Name == order.userEmail)
                         {
-                            order.status = "fechado";
-                            db.SaveChanges();
+                            if(order.precoFrete == 0)
+                            {
+                                order.status = "fechado";
+                                db.SaveChanges();
+                            }
+                            
                         }
                     }
                     return BadRequest();
