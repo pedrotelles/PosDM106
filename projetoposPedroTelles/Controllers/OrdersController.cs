@@ -58,7 +58,7 @@ namespace projetoposPedroTelles.Controllers
         [Route("cep")]
         public IHttpActionResult ObtemFreteData(int id)
         {
-            db.Orders.Find(id);
+            Order order = db.Orders.Find(id);
             CRMRestClient crmClient = new CRMRestClient();
             Customer customer = crmClient.GetCustomerByEmail(User.Identity.Name);
             if (customer != null)
