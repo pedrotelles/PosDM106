@@ -252,6 +252,10 @@
     <Compile Include="Migrations\201709100601088_updated-2-C.Designer.cs">
       <DependentUpon>201709100601088_updated-2-C.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709100905359_ultima.cs" />
+    <Compile Include="Migrations\201709100905359_ultima.Designer.cs">
+      <DependentUpon>201709100905359_ultima.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -352,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709100601088_updated-2-C.resx">
       <DependentUpon>201709100601088_updated-2-C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709100905359_ultima.resx">
+      <DependentUpon>201709100905359_ultima.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
